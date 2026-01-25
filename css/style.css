@@ -1,0 +1,157 @@
+/*===Slide ảnh tự động===*/
+
+.image-scroll {
+    width: 900px;
+    height: 600px;
+    /**/
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+.image-scroll img {
+    object-fit: cover;
+}
+
+.image-scroll img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: slide 15s infinite;
+    opacity: 0;
+}
+/* Mỗi ảnh sẽ xuất hiện ở một thời điểm khác nhau */
+/* Sử dụng nth-child để tạo độ trễ thời gian */
+.image-scroll img:nth-child(1) { animation-delay: 0s; }
+.image-scroll img:nth-child(2) { animation-delay: 3s; }
+.image-scroll img:nth-child(3) { animation-delay: 6s; }
+.image-scroll img:nth-child(4) { animation-delay: 9s; }
+.image-scroll img:nth-child(5) { animation-delay: 12s; }
+
+/* Animation điều khiển hiệu ứng chuyển ảnh */
+/* 10% và 30% để ảnh giữ nguyên độ hiển thị rõ nét trước khi mờ đi cho ảnh sau hiện lên */
+@keyframes slide {
+    /* Ảnh bắt đầu ẩn */
+    0% { opacity: 0; }
+    /* Ảnh hiện dần */
+    10% { opacity: 1; }
+    /* Giữ ảnh hiển thị */
+    30% { opacity: 1; }
+    /* Ảnh mờ dần và biến mất */
+    40% { opacity: 0; }
+}
+/*===Định dạng cho các các đơn===*/
+.image {
+    text-align: center;
+}
+
+.image img {
+    width: 900px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/*===Thanh menu===*/
+.menu {
+    text-align: center;
+    background-color: #e6f2ff;
+    padding: 15px 0;
+}
+/* Các mục trong menu */
+.menu-item {
+    display: inline-block;
+    margin: 0 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #004080;
+}
+/* Hiệu ứng khi rê chuột vào menu */
+.menu-item:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+
+/*===Định dạng font cho phần văn bản===*/
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    margin: 40px;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+/* Tiêu đề chính */
+h1 {
+    text-align: center;
+    color: #004080;
+    margin-bottom: 30px;
+}
+/* Tiêu đề phụ */
+h2 {
+    color: #0066cc;
+    margin-top: 20px;
+}
+/* Đoạn giới thiệu */
+.intro p{
+    font-size: 20px;
+    font-style: italic;
+}
+/* Phần nội dung chính */
+.content {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.8;
+}
+
+.content h2 {
+    color: #0066cc;
+    font-size: 22px;
+    margin: 25px;
+}
+
+.content p {
+    font-size: 18px;
+    margin: 15px;
+}
+.center {
+    text-align: center;
+}
+/*===Footer===*/
+footer {
+    text-align: center;/*căn lề*/
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+/*===Ô góp ý===*/
+/* Khung form góp ý */
+#feedback fieldset {
+    border: 2px solid #004080;
+    padding: 20px;
+    border-radius: 8px;
+}
+/* Ô nhập thông tin */
+#feedback input,
+#feedback textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+/* Nút gửi */
+#feedback button {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Hiệu ứng cho nút gửi */
+#feedback button:hover {
+    background-color: #ff6600;
+}
+

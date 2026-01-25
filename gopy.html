@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <!--Giúp website có thể hiển thị tốt trên các thiết bị khác nhau -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Liên kết với file CSS -->
+        <link rel="stylesheet" href="css/style.css">
+    <title>Góp ý</title>
+</head>
+
+<body>
+<!-- Thanh menu -->
+<nav class="menu">
+    <a class="menu-item" href="index.html">Trang Chủ</a>
+    <a class="menu-item" href="gioithieu.html">Giới Thiệu</a>
+    <a class="menu-item" href="dulich.html">Du lịch & Giải Trí</a>
+    <a class="menu-item" href="amthuc.html">Ẩm thực</a>
+    <a class="menu-item" href="lienhe.html">Liên Hệ</a>
+    <a class="menu-item" href="gopy.html">Góp Ý</a>
+</nav>
+
+<main>
+    <h1>Góp ý cho chúng tôi</h1>
+<!--thẻ Form để thu thập ý kiến-->
+<form id="feedback">
+    <fieldset>
+        <legend>Góp ý</legend>
+        <!--Ô để nhập tên-->
+        Họ và tên:<br/>
+        <input type="text" id="name" placeholder="Nhập tên của bạn..." />
+        <br/><br/>
+        <!--Ô để nhập góp-->
+        Góp ý của bạn:<br/>
+        <textarea id="message" placeholder="Nhập nội dung góp ý..."></textarea>
+        <br/><br/>
+        <!--Nút gửi góp ý lên localStorage-->
+        <button type="submit">Gửi</button>
+    </fieldset>
+</form>
+<nav>
+    <a href="index.html">Trở Về Trang Chủ</a>
+</nav>
+</main>
+<!-- Phần footer của trang -->
+<footer>
+    © 2026 – Thành Phố Nha Trang
+</footer>
+<script src="js/gopy.js"></script>
+</body>
+</html>
